@@ -1,4 +1,4 @@
-# 04_stratified_random_sampling.R
+# 04_aase.R
 # Stratified Simple Random Sampling
 # 
 # This script simulates Stratified Simple Random Sampling without
@@ -19,7 +19,7 @@
 # Subdistrict can be used as a more practical intermediate option, alos has 
 # an similar within variance as neighborhood.
 
-set.seed(123)
+set.seed(321)
 
 # Stratas's sizes 
 
@@ -50,7 +50,7 @@ pop <- split( df$alfabetizada, df$subdistrito)
 
 # Simulation
 
-mean_asse <- numeric(B)
+mean_aase <- numeric(B)
 
 for (i in 1:B) {
   
@@ -81,24 +81,24 @@ for (i in 1:B) {
   
   # Sample strata's mean 
   
-  mean_asse[i] <- sum(tabela$Wh * means_h)
+  mean_aase[i] <- sum(tabela$Wh * means_h)
 }
 
 # dataframe 
 
-df_mean_asse <- data.frame(amostra = 1:B,media = mean_asse)
+df_mean_aase <- data.frame(amostra = 1:B,media = mean_aase)
 
 # Means of means and variance 
 
-mean_m_asse <- mean(df_mean_asse$media)
+mean_m_aase <- mean(df_mean_aase$media)
 
 # Distribution Plot 
 
-plot_asse_distribution <- function() {
+plot_aase_distribution <- function() {
   
   # Histogram plot
   
-  p_hist <- ggplot(df_mean_asse, aes(x = media)) +
+  p_hist <- ggplot(df_mean_aase, aes(x = media)) +
     geom_histogram(
       bins = 30,
       fill = "steelblue",
@@ -106,16 +106,16 @@ plot_asse_distribution <- function() {
       alpha = 0.9
     ) +
     geom_vline(
-      xintercept = mean_m_asse,
+      xintercept = mean_m_aase,
       linetype = "dashed",
       color = "orange",
       linewidth = 1
     ) +
     annotate(
       geom = "text",
-      x = mean_m_asse,
+      x = mean_m_aase,
       y = Inf,
-      label = paste0("Mean = ", round(mean_m_asse, 4)),
+      label = paste0("Mean = ", round(mean_m_aase, 4)),
       color = "orange",
       vjust = 1.5,
       hjust = -0.05,
@@ -137,7 +137,7 @@ plot_asse_distribution <- function() {
   
   # Density plot
   
-  p_density <- ggplot(df_mean_asse, aes(x = media)) +
+  p_density <- ggplot(df_mean_aase, aes(x = media)) +
     geom_density(
       fill = "steelblue",
       color = "darkblue",
@@ -145,16 +145,16 @@ plot_asse_distribution <- function() {
       linewidth = 1
     ) +
     geom_vline(
-      xintercept = mean_m_asse,
+      xintercept = mean_m_aase,
       linetype = "dashed",
       color = "orange",
       linewidth = 1
     ) +
     annotate(
       geom = "text",
-      x = mean_m_asse,
+      x = mean_m_aase,
       y = Inf,
-      label = paste0("Mean = ", round(mean_m_asse, 4)),
+      label = paste0("Mean = ", round(mean_m_aase, 4)),
       color = "orange",
       vjust = 1.5,
       hjust = -0.05,
@@ -185,12 +185,12 @@ plot_asse_distribution <- function() {
 }
 
 
-plot_asse_distribution()
+plot_aase_distribution()
 
 
 ggsave(
   filename = "output/figures/04_asse_sampling_distribution.png",
-  plot = plot_aas_distribution(),
+  plot = plot_aase_distribution(),
   width = 8,
   height = 5,
   dpi = 300
