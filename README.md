@@ -1,4 +1,4 @@
-# Methods-of-Survey
+# Methods of Survey
 
 This directory contains applied survey methods projects developed from assignments in an undergraduate course on survey research taught by Professor Felipe Nunes, CEO of Quaest. 
 
