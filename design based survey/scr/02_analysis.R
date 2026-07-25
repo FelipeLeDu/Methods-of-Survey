@@ -297,7 +297,8 @@ variance_decomposition <- function(data, group_var, group_name) {
 variance_comparison <- bind_rows(
   variance_decomposition(df, distrito, "district"),
   variance_decomposition(df, subdistrito, "subdistrict"),
-  variance_decomposition(df, bairro, "neighborhood")
+  variance_decomposition(df, bairro, "neighborhood"),
+  variance_decomposition(df, codigo_setor, "census tract")
 )
 
 print(variance_comparison)
