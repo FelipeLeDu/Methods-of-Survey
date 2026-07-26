@@ -10,7 +10,7 @@ The portfolio is divided into three main parts. The first project focuses on des
 
 ---
 
-## 1. Design-Based Survey
+## 1. Design Based Survey
 
 The first project studies design-based survey sampling methods using a population dataset from Macaé, Rio de Janeiro. The exercise compares different sampling designs and evaluates how each design affects the sampling distribution of an estimator.
 

@@ -5,22 +5,13 @@ cat("Loading required packages...\n")
 
 # List of required packages
 packages <- c(
-  "fredr",
-  "tidyverse",
-  "dynlm",
-  "lmtest",
-  "sandwich",
-  "forecast",
-  "tseries",
-  "FinTS",
-  "gridExtra",
-  "knitr",
-  "rbcb",
-  "zoo",
-  "urca",
-  "strucchange",
-  "lubridate",
-  "modelsummary"
+  "dplyr",
+  "tidyr",
+  "ggplot2",
+  "stringr",
+  "forcats",
+  "lme4",
+  "sf"
 )
 
 # Function to install missing packages and load them
