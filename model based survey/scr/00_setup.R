@@ -11,7 +11,10 @@ packages <- c(
   "stringr",
   "forcats",
   "lme4",
-  "sf"
+  "sf",
+  "broom.mixed",
+  "gridExtra",
+  "purrr"
 )
 
 # Function to install missing packages and load them
