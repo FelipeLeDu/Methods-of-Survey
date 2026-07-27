@@ -22,6 +22,6 @@ source("scr/04_estimation.R")
 
 # Stratification
 
-cat("Step 2: stratification...\n")
+cat("Step 3: stratification...\n")
 
 source("scr/05_stratification.R")
