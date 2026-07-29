@@ -51,8 +51,4 @@ This is different from model-based survey adjustment methods, such as MRP, where
 
 The project also computes design effects.
 
-The design effect compares the variance of an estimator under a given sampling design with the variance under Simple Random Sampling.
-
-If the design effect is below 1, the design is more efficient than Simple Random Sampling.
-
-If the design effect is above 1, the design produces more sampling variance than Simple Random Sampling.
+The design effect compares the variance of an estimator under a given sampling design with the variance under Simple Random Sampling. If the design effect is below 1, the design is more efficient than Simple Random Sampling. If the design effect is above 1, the design produces more sampling variance than Simple Random Sampling.
